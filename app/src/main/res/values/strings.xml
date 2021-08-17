@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="email">Email:</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="user_type">User Type:</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="donor">Donor</string>
+    <string name="charity_admin">Charity Admin</string>
+    <string name="signup">Register</string>
+    <string name="registration">REGISTRATION</string>
+
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login1">login</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_the_password_reset_page">Welcome to the Password Reset Page</string>
+    <string name="enter_email1">Enter Email</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="go_to_login">Go to Login</string>
+    <string name="Confirm">"confirm "</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
