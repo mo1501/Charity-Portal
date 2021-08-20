@@ -6,8 +6,9 @@
         android:id="@+id/homeFragment"/>
     <item android:title="Favourites"
        android:icon="@drawable/favourites_icon"
-        android:id="@+id/profileFragment"/>
+        android:id="@+id/favouritesFragment"/>
     <item android:title="Profile"
         android:icon="@drawable/profile_icon"
-        android:id="@+id/favouritesFragment"/>
+        android:id="@+id/profileFragment"
+        />
 </menu>
