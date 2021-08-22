@@ -43,11 +43,13 @@ public class MainActivity2 extends AppCompatActivity  {
     Fragment active = fragment1;
     Fragment selectedFragment = null;
 
-    RecyclerView recyclerView;
+    /*RecyclerView recyclerView;
     ArrayList<Charities> charitiesArrayList;
     myAdapter myAdapter;
     FirebaseFirestore db;
     ProgressDialog progressDialog=new ProgressDialog(this);
+
+*/
 
                 /*switch (item.getItemId()) {
                     case R.id.homeFragment:
@@ -77,6 +79,9 @@ public class MainActivity2 extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+     /*
         progressDialog=new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Fetching Data....");
@@ -86,10 +91,14 @@ public class MainActivity2 extends AppCompatActivity  {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         db = FirebaseFirestore.getInstance();
-        charitiesArrayList = new ArrayList<>();
+        charitiesArrayList = new ArrayList<Charities>();
         myAdapter = new myAdapter(MainActivity2.this,charitiesArrayList);
         recyclerView.setAdapter(myAdapter);
         EventChangeListener();
+
+      */
+
+
        /* fm.beginTransaction().add(R.id.homeFragment, fragment1, "1").hide(fragment2).commit();
         fm.beginTransaction().add(R.id.favouritesFragment, fragment2, "2").hide(fragment3).commit();
         fm.beginTransaction().add(R.id.profileFragment,fragment3, "3").commit();
@@ -141,7 +150,7 @@ public class MainActivity2 extends AppCompatActivity  {
 
 
     }
-
+/*
 public void EventChangeListener(){
         db.collection("Charities").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
@@ -157,12 +166,16 @@ public void EventChangeListener(){
                         charitiesArrayList.add(dc.getDocument().toObject(Charities.class));
                     }
                     myAdapter.notifyDataSetChanged();
-                    if(progressDialog.isShowing())
-                        progressDialog.dismiss();
+                   if(progressDialog.isShowing())
+                       progressDialog.dismiss();
                 }
             }
         });
 }
+
+ */
+
+
   /*  public void switchToHome() {
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.homeFragment, HomeFragment.class, null).commit();

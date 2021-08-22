@@ -9,27 +9,35 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.firestore.DocumentChange;
+
 import java.util.ArrayList;
+import java.util.EventListener;
 
 public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
     Context context;
+    ArrayList<Charities> charitiesArrayList ;
+
 
     public myAdapter(Context context, ArrayList<Charities> charitiesArrayList) {
         this.context = context;
         this.charitiesArrayList = charitiesArrayList;
     }
 
-    ArrayList<Charities> charitiesArrayList;
+
+
+
     @NonNull
 
     @Override
     public myAdapter.MyViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.listcharities,parent,false);
+       View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.listcharities ,parent,false);
 
-
-
-
+       // return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.listcharities,parent,false));
         return new MyViewHolder(v);
+
+
+
     }
 
     @Override
@@ -37,17 +45,18 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
 
         Charities charity= charitiesArrayList.get(position);
 
-        holder.name.setText(charity.Name);
-        holder.description.setText(charity.Description);
-        holder.email.setText(charity.Email);
-        holder.type.setText(charity.Type);
-        holder.payment.setText(charity.Payment);
+        holder.name.setText(charity.getName());
+        holder.description.setText(charity.getDescription());
+        holder.email.setText(charity.getEmail());
+        holder.type.setText(charity.getType());
+        holder.payment.setText(charity.getPayment());
 
     }
-
     @Override
     public int getItemCount() {
+
         return charitiesArrayList.size();
+
     }
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView name,description,type,payment,email;
@@ -60,4 +69,5 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
             email=itemView.findViewById(R.id.emailslot);
         }
     }
+
 }
