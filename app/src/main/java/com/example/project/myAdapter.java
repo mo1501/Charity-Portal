@@ -47,7 +47,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
 
         holder.name.setText(charity.getName());
         holder.description.setText(charity.getDescription());
-        holder.email.setText(charity.getEmail());
+        //holder.email.setText(charity.getEmail());
         holder.type.setText(charity.getType());
         holder.payment.setText(charity.getPayment());
 
@@ -66,7 +66,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.MyViewHolder> {
             description=itemView.findViewById(R.id.Descriptionslot);
             type=itemView.findViewById(R.id.typeslot);
             payment=itemView.findViewById(R.id.paymentslot);
-            email=itemView.findViewById(R.id.emailslot);
+           // email=itemView.findViewById(R.id.emailslot);
         }
     }
 

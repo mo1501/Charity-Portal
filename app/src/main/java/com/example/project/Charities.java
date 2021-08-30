@@ -5,11 +5,11 @@ public class Charities {
 
     public Charities(){}
 
-    public Charities(String name, String description, String payment, String email, String type) {
+    public Charities(String name, String description, String payment /*String email*/, String type) {
         Name = name;
         Description = description;
         Payment = payment;
-        Email = email;
+       // Email = email;
         Type = type;
     }
 
@@ -37,13 +37,17 @@ public class Charities {
         Payment = payment;
     }
 
-    public String getEmail() {
-        return Email;
+    /*public String getEmail() {
+
+        return this.getEmail();
     }
 
     public void setEmail(String email) {
-        Email = email;
+
+        this.Email = email;
     }
+
+     */
 
     public String getType() {
         return Type;

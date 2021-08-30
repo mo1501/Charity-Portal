@@ -2,7 +2,7 @@ package com.example.project;
 
 public class User {
 
-    public String firstname,lastname,email,password,number;
+    public String firstname,lastname,email,password,number,user_id;
     public User(){
 
     }
@@ -12,6 +12,8 @@ public class User {
         this.email=email;
         this.password=password;
         this.number=number;
+       // this.user_id=user_id;
+
 
     }
 

@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="Name:"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="Description:"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:text="Type:"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -89,25 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email:"
-                android:textColor="@color/black"
-                android:textSize="26sp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/emailslot"
-                android:layout_marginStart="8dp"
-                android:text="Moha"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
-
-        </LinearLayout>
+            android:orientation="horizontal"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:text="Payment:"
                 android:textColor="@color/black"
-                android:textSize="26sp"
+                android:textSize="20sp"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -141,17 +123,10 @@
 
 
             <Button
-                android:id="@+id/Donatebutton"
-                android:layout_width="60dp"
-
-                android:layout_height="50dp"
-                android:background="@drawable/donate_icon" />
-
-            <Button
                 android:id="@+id/favouritesbutton"
-                android:layout_width="60dp"
+                android:layout_width="20dp"
 
-                android:layout_height="50dp"
+                android:layout_height="20dp"
                 android:background="@drawable/favourites22_icon" />
 
 

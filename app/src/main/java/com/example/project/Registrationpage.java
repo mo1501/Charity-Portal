@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -34,6 +35,7 @@ public class Registrationpage extends AppCompatActivity {
             editTextPassword,editTextPassword2,editTextNumber;
     Button buttonRegister;
     private FirebaseAuth mAuth;
+    private String user_id;
 
      //FirebaseAuth mAuth;
 
@@ -82,15 +84,46 @@ public class Registrationpage extends AppCompatActivity {
                     }
 
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
+                    FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+                    String userid = user1.getUid();
                     User user = new User (firstname,lastname,email,password2,number);
-                    db.collection("Users")
+                    /*db.collection("users").document(mAuth.getUid()).set(user)
+
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    createUser();
+                                    Toast.makeText(Registrationpage.this,"Register sucess",Toast.LENGTH_SHORT).show();
+                                    Intent intent1 = new Intent(Registrationpage.this,MainActivity2.class);
+                                    startActivity(intent1);
+                                }
+                            });
+
+*/         /* db.collection("users").document(userid).set(user)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(Registrationpage.this, "Welcome", Toast.LENGTH_SHORT).show();
+                                    createUser();
+                                    Intent intent1 = new Intent(Registrationpage.this,MainActivity2.class);
+                                    startActivity(intent1);
+                                }
+                                public void onFailure(Void aVoid) {
+                                    Toast.makeText(Registrationpage.this, "Registration failed", Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+                            */
+
+
+                   db.collection("Users")
                             .add(user)
                             .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                 @Override
                                 public void onSuccess(DocumentReference documentReference) {
                                     Toast.makeText(Registrationpage.this, "Welcome", Toast.LENGTH_SHORT).show();
                                     createUser();
-                                    Intent intent1 = new Intent(Registrationpage.this,MainActivity2.class);
+                                    Intent intent1 = new Intent(Registrationpage.this,MainActivity.class);
                                     startActivity(intent1);
                                 }
                             })
@@ -100,6 +133,10 @@ public class Registrationpage extends AppCompatActivity {
                                     Toast.makeText(Registrationpage.this, "Not Registered", Toast.LENGTH_SHORT).show();
                                 }
                             });
+
+
+
+
                    /* mAuth.createUserWithEmailAndPassword(email,password2).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull  Task<AuthResult> task) {

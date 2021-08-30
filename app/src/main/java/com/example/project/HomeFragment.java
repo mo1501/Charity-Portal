@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
+import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 
